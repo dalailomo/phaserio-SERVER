@@ -1,7 +1,5 @@
-import {
-    User,
-    UserManager,
-} from "../socket-handlers/handle-user-connections/types.d.ts";
+import { UserManager } from "../socket-handlers/handle-user-connections/types.d.ts";
+import { User } from "./types.d.ts";
 
 const users: { [key: string]: User } = {};
 
