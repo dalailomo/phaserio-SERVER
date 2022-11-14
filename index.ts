@@ -19,5 +19,4 @@ io.on("connection", (socket) => {
 
 await serve(io.handler(), {
     port: 3001,
-    
 });
