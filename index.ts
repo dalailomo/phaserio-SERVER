@@ -4,7 +4,12 @@ import socketHandlers from "./modules/socket-handlers/index.ts";
 import inMemoryUserManager from "./modules/in-memory-user-manager/index.ts";
 import inMemoryPlayerDataManager from "./modules/in-memory-player-data-manager/index.ts";
 
-const io = new Server();
+const io = new Server({
+    cors: {
+        origin: "http://localhost:3000",
+        methods: ["GET", "POST"]
+      }
+});
 
 io.on("connection", (socket) => {
     socketHandlers.handleUserConnections(socket, inMemoryUserManager);
@@ -13,5 +18,6 @@ io.on("connection", (socket) => {
 });
 
 await serve(io.handler(), {
-    port: 3000,
+    port: 3001,
+    
 });
