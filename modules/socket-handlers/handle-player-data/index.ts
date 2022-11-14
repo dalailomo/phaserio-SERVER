@@ -3,7 +3,7 @@ import {
     PlayerDataManager,
     Player,
     NewPlayerState,
-} from "../../in-memory-player-data-manager/types.d.ts";
+} from "./types.d.ts";
 
 const EVENT = {
     SB_NewPlayerState: "handle-player-data:socket-broadcast:new-player-state",

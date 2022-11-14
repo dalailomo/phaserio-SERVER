@@ -1,4 +1,4 @@
-import { NewPlayerState, Player, PlayerDataManager } from "./types.d.ts";
+import { NewPlayerState, Player, PlayerDataManager } from "../socket-handlers/handle-player-data/types.d.ts";
 
 const players: { [key: string]: Player } = {};
 
